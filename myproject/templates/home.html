@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+</head>
+<body>
+<h1>Hello Worl - I'm using a render function</h1>
+<table>
+	<ul>
+		<li>home</li>
+		<li>about</li>
+
+
+<div>
+	
+<form method="POST">
+	{%csrf_token%}
+	<input type="text" name="question">
+<!-- 	<input type="text" name="answer"> -->
+	<button type="submit">Submit</button>
+</form>
+
+</div>
+<div>
+
+		{%for chat in chats%}
+
+		<p>Question:{{chat.question}}</p>
+		<p>Answer:{{chat.answer}}</p>
+
+		{%endfor%}
+</div>
+	</ul>
+</table>
+</body>
+</html>
